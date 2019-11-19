@@ -30,4 +30,13 @@ class HasWallet:
     # Get the Wallet
     @property
     def wallet(self):
-        return Wallet.objects.filter(holder_type=self._meta.label_lower, holder_id=self.id)
+         wallet = Wallet.objects.filter(holder_type=self._meta.label_lower, holder_id=self.id).first()
+         if not wallet:
+             wallet = Wallet(
+                 holder_type=self._meta.label_lower,
+                 holder_id=self.id,
+
+             ).save()
+         return wallet
+
+
