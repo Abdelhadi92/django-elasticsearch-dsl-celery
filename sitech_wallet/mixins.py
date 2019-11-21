@@ -35,4 +35,9 @@ class HasWallet:
              wallet = Wallet(holder=self).save()
          return wallet
 
+    # Get the balance
+    @property
+    def balance(self):
+        return self.wallet.balance
+
 

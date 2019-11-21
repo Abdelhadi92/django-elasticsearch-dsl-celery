@@ -37,13 +37,13 @@ class Profile(models.Model, HasWallet):
 Then you can easily make transactions from your model.
 ```python
 profile = Profile.objects.get(pk=1)
-profile.wallet.balance // 0
+profile.balance // 0
   
 profile.deposit(100)
-profile.wallet.balance // 100
+profile.balance // 100
 
 profile.withdraw(20)
-profile.wallet.balance // 80
+profile.balance // 80
 ```	
 
 **Remember ,** you may use the `sitech_wallet.HasWallet` mixin on any of your models. You are not limited to only including it on your `Profile`model.
