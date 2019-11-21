@@ -1,5 +1,5 @@
 from sitech_wallet.models import Wallet
-from sitech_wallet.services import verifyWithdraw, deposit, forceWithdraw, forceTransfer
+from sitech_wallet.services import verify_withdraw, deposit, force_withdraw, forceTransfer
 
 
 class HasWallet:
@@ -11,11 +11,11 @@ class HasWallet:
     # Withdrawals from the system
     def withdraw(self, amount, meta=None, force=False):
         if not force:
-            verifyWithdraw(self, amount)
-        forceWithdraw(self.wallet, amount, meta)
+            verify_withdraw(self, amount)
+        force_withdraw(self.wallet, amount, meta)
 
     # Checks if you can withdraw funds
-    def canWithdraw(self, amount, allow_zero=False):
+    def can_withdraw(self, amount, allow_zero=False):
         if allow_zero and amount == 0:
             return True
 
@@ -24,7 +24,7 @@ class HasWallet:
     # A method that transfers funds from host to host
     def transfer(self, wallet, amount, meta=None, force=False):
         if not force:
-            verifyWithdraw(self.wallet, amount)
+            verify_withdraw(self.wallet, amount)
         forceTransfer(self.wallet, wallet, amount, meta)
 
     # Get the Wallet

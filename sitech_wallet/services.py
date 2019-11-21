@@ -7,8 +7,8 @@ def checkAmount(amount):
         raise exceptions.AmountInvalid()
 
 
-def verifyWithdraw(holder, amount):
-    if not holder.canWithdraw(amount):
+def verify_withdraw(holder, amount):
+    if not holder.can_withdraw(amount):
         raise exceptions.InsufficientFunds()
 
 
@@ -27,7 +27,7 @@ def deposit(wallet, amount, meta=None):
     return transaction
 
 
-def forceWithdraw(wallet, amount, meta=None):
+def force_withdraw(wallet, amount, meta=None):
     checkAmount(amount)
 
     wallet.balance -= amount
