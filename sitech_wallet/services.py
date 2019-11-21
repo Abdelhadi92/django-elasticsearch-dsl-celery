@@ -2,7 +2,7 @@ from sitech_wallet import exceptions
 from sitech_wallet.models import Transaction
 
 
-def checkAmount(amount):
+def check_amount(amount):
     if amount < 0:
         raise exceptions.AmountInvalid()
 
@@ -13,7 +13,7 @@ def verify_withdraw(holder, amount):
 
 
 def deposit(wallet, amount, meta=None):
-    checkAmount(amount)
+    check_amount(amount)
 
     wallet.balance += amount
     wallet.save()
@@ -28,7 +28,7 @@ def deposit(wallet, amount, meta=None):
 
 
 def force_withdraw(wallet, amount, meta=None):
-    checkAmount(amount)
+    check_amount(amount)
 
     wallet.balance -= amount
     wallet.save()
@@ -42,8 +42,8 @@ def force_withdraw(wallet, amount, meta=None):
     return transaction
 
 
-def forceTransfer(from_wallet, to_wallet, amount, meta=None):
-    checkAmount(amount)
+def force_transfer(from_wallet, to_wallet, amount, meta=None):
+    check_amount(amount)
 
     from_wallet.balance -= amount
     from_wallet.save()

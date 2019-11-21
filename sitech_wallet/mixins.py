@@ -1,5 +1,5 @@
 from sitech_wallet.models import Wallet
-from sitech_wallet.services import verify_withdraw, deposit, force_withdraw, forceTransfer
+from sitech_wallet.services import verify_withdraw, deposit, force_withdraw, force_transfer
 
 
 class HasWallet:
@@ -25,7 +25,7 @@ class HasWallet:
     def transfer(self, wallet, amount, meta=None, force=False):
         if not force:
             verify_withdraw(self.wallet, amount)
-        forceTransfer(self.wallet, wallet, amount, meta)
+        force_transfer(self.wallet, wallet, amount, meta)
 
     # Get the Wallet
     @property
