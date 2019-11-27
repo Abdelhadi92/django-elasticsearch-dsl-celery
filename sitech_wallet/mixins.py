@@ -24,7 +24,7 @@ class HasWallet:
     # A method that transfers funds from host to host
     def transfer(self, wallet, amount, meta=None, force=False):
         if not force:
-            verify_withdraw(self.wallet, amount)
+            verify_withdraw(self, amount)
         force_transfer(self.wallet, wallet, amount, meta)
 
     # Get the Wallet

@@ -44,6 +44,10 @@ profile.balance // 100
 
 profile.withdraw(20)
 profile.balance // 80
+
+profile2 = Profile.objects.get(pk=2)
+profile.transfer(profile2, 20) // or profile.transfer(profile2.wallet, 20)
+
 ```	
 
 **Remember ,** you may use the `sitech_wallet.HasWallet` mixin on any of your models. You are not limited to only including it on your `Profile`model.
