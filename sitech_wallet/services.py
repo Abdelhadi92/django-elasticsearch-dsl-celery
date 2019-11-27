@@ -12,9 +12,16 @@ def verify_withdraw(holder, amount):
         raise exceptions.InsufficientFunds()
 
 
+def get_wallet(wallet):
+    if isinstance(wallet, HasWallet):
+        wallet = wallet.wallet
+    return wallet
+
+
 def deposit(wallet, amount, meta=None):
     check_amount(amount)
 
+    wallet = get_wallet(wallet)
     wallet.balance += amount
     wallet.save()
 
@@ -29,6 +36,7 @@ def deposit(wallet, amount, meta=None):
 
 def force_withdraw(wallet, amount, meta=None):
     check_amount(amount)
+    wallet = get_wallet(wallet)
 
     wallet.balance -= amount
     wallet.save()
@@ -44,6 +52,9 @@ def force_withdraw(wallet, amount, meta=None):
 
 def force_transfer(from_wallet, to_wallet, amount, meta=None):
     check_amount(amount)
+
+    from_wallet = get_wallet(from_wallet)
+    to_wallet = get_wallet(to_wallet)
 
     from_wallet.balance -= amount
     from_wallet.save()
