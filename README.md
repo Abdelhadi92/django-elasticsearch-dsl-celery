@@ -9,7 +9,7 @@
  pip install git+https://github.com/Abdelhadi92/django-elasticsearch-dsl-celery.git
 ```
 
-2. Add the following line in `settings.py`:
+2. Add the following line to your `settings.py`:
 ```python
 ELASTICSEARCH_DSL_SIGNAL_PROCESSOR = 'django_elasticsearch_dsl_celery.CelerySignalProcessor'
 ```
