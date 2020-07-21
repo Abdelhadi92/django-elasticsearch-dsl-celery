@@ -9,9 +9,9 @@ base_dir = os.path.dirname(__file__)
 setup(
       name='sitech-django-wallet',
       version=version,
-      description='Sitech django wallet',
+      description='Allows automatic updates on the index as delayed background tasks using Celery',
       long_description=open(os.path.join(base_dir, "README.md")).read(),
-      url='https://github.com/sitmena/sitech-django-audit_log',
+      url='https://github.com/Abdelhadi92/django-elasticsearch-dsl-celery',
       classifiers=[
           'Environment :: Web Environment',
           'Framework :: Django',
@@ -25,9 +25,9 @@ setup(
           'Programming Language :: Python :: 3.6',
           'Programming Language :: Python :: 3.7',
       ],
-      keywords='Sitech Django wallet',
+      keywords='django-elasticsearch-dsl Celery Processor',
       author='Abdelhadi Abu-Shamleh',
-      author_email='a.abushamleh@sit-mena.com',
+      author_email='abushamleh92@gmail.com',
       license='BSD',
       packages=find_packages(exclude=['ez_setup']),
       include_package_data=True,
@@ -35,6 +35,6 @@ setup(
       dependency_links=[],
       install_requires=[
           'setuptools',
-          'jsonfield',
+          'celery',
       ]
 )
