@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1'
+version = '1.0'
 
 base_dir = os.path.dirname(__file__)
 
@@ -11,6 +11,7 @@ setup(
       version=version,
       description='Allows automatic updates on the index as delayed background tasks using Celery',
       long_description=open(os.path.join(base_dir, "README.md")).read(),
+      long_description_content_type="text/markdown",
       url='https://github.com/Abdelhadi92/django-elasticsearch-dsl-celery',
       classifiers=[
           'Environment :: Web Environment',

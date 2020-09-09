@@ -1,0 +1,9 @@
+README.md
+setup.py
+django_elasticsearch_dsl_celery/__init__.py
+django_elasticsearch_dsl_celery.egg-info/PKG-INFO
+django_elasticsearch_dsl_celery.egg-info/SOURCES.txt
+django_elasticsearch_dsl_celery.egg-info/dependency_links.txt
+django_elasticsearch_dsl_celery.egg-info/not-zip-safe
+django_elasticsearch_dsl_celery.egg-info/requires.txt
+django_elasticsearch_dsl_celery.egg-info/top_level.txt

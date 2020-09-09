@@ -12,3 +12,6 @@ mm.pyc
 
 # Mac DS_Store Files
 .DS_Store
+
+build
+dist

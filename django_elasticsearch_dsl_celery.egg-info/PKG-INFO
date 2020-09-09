@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: django-elasticsearch-dsl-celery
+Version: 1.0
+Summary: Allows automatic updates on the index as delayed background tasks using Celery
+Home-page: https://github.com/Abdelhadi92/django-elasticsearch-dsl-celery
+Author: Abdelhadi Abu-Shamleh
+Author-email: abushamleh92@gmail.com
+License: BSD
+Description: 
+        # django-elasticsearch-dsl Celery Processor
+        
+        
+        ## Installation
+        
+        1. Run the [pip](https://pip.pypa.io/en/stable/) command to install the latest version:
+        ```bash
+         pip install git+https://github.com/Abdelhadi92/django-elasticsearch-dsl-celery.git
+        ```
+        
+        2. Add the following line to your `settings.py`:
+        ```python
+        ELASTICSEARCH_DSL_SIGNAL_PROCESSOR = 'django_elasticsearch_dsl_celery.CelerySignalProcessor'
+        ```
+        
+Keywords: django-elasticsearch-dsl Celery Processor
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
