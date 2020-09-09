@@ -45,7 +45,7 @@ class CelerySignalProcessor(RealTimeSignalProcessor):
         """
         app_label = instance._meta.app_label
         model_name = instance._meta.model_name
-        handle_save.delay(instance.pk, app_label, model_name)
+        transaction.on_commit(lambda: handle_save.delay(instance.pk, app_label, model_name))
 
     def handle_pre_delete(self, sender, instance, **kwargs):
         """Handle removing of instance object from related models instance.
