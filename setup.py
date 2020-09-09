@@ -7,7 +7,7 @@ base_dir = os.path.dirname(__file__)
 
 
 setup(
-      name='sitech-django-wallet',
+      name='django-elasticsearch-dsl-celery',
       version=version,
       description='Allows automatic updates on the index as delayed background tasks using Celery',
       long_description=open(os.path.join(base_dir, "README.md")).read(),
@@ -24,6 +24,7 @@ setup(
           'Programming Language :: Python :: 3.5',
           'Programming Language :: Python :: 3.6',
           'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
       ],
       keywords='django-elasticsearch-dsl Celery Processor',
       author='Abdelhadi Abu-Shamleh',
