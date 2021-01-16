@@ -6,7 +6,7 @@
 
 1. Run the [pip](https://pip.pypa.io/en/stable/) command to install the latest version:
 ```bash
- pip install git+https://github.com/Abdelhadi92/django-elasticsearch-dsl-celery.git
+ pip install django-elasticsearch-dsl-celery
 ```
 
 2. Add the following line to your `settings.py`:
