@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: django-elasticsearch-dsl-celery
-Version: 1.0
+Version: 1.1
 Summary: Allows automatic updates on the index as delayed background tasks using Celery
 Home-page: https://github.com/Abdelhadi92/django-elasticsearch-dsl-celery
 Author: Abdelhadi Abu-Shamleh
@@ -14,7 +14,7 @@ Description:
         
         1. Run the [pip](https://pip.pypa.io/en/stable/) command to install the latest version:
         ```bash
-         pip install git+https://github.com/Abdelhadi92/django-elasticsearch-dsl-celery.git
+         pip install django-elasticsearch-dsl-celery
         ```
         
         2. Add the following line to your `settings.py`:
